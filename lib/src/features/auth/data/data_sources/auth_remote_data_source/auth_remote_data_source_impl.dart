@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:errors/errors.dart';
-import 'package:meal_payment_app/src/core/api_client.dart';
-import 'package:meal_payment_app/src/features/auth/data/data.dart';
+import '../../../../../core/api/api_client.dart';
+import '../../data.dart';
 
 class AuthenticationRemoteDataSourceImpl
     extends AuthenticationRemoteDataSource {

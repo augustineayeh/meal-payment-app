@@ -1,6 +1,6 @@
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
+import '../../domain/domain.dart';
 
 part 'login_model.g.dart';
 

@@ -1,9 +1,10 @@
 import 'dart:convert';
 
-import 'package:meal_payment_app/src/core/constants/secure_storage_consts.dart';
-import 'package:meal_payment_app/src/features/auth/data/data.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
 import 'package:secure_storage_repository/storage_repository.dart';
+
+import '../../../../../core/constants/secure_storage_consts.dart';
+import '../../../domain/domain.dart';
+import '../../data.dart';
 
 class AuthenticationLocalDataSourceImpl extends AuthenticationLocalDataSource {
   AuthenticationLocalDataSourceImpl(

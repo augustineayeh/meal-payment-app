@@ -1,6 +1,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
+
+import '../../domain/domain.dart';
 
 part 'user_model.g.dart';
 
@@ -11,14 +12,10 @@ class UserModel extends User {
     required this.firstName,
     required this.lastName,
     required super.email,
-    required super.bio,
-    required super.avatar,
+
     required super.phone,
-    super.birthday,
-    required super.city,
-    required super.country,
-    super.interests,
-    super.languages,
+   
+   
     this.created,
     this.updated,
     //   required super.gender,

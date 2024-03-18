@@ -1,7 +1,7 @@
 import 'package:errors/errors.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:meal_payment_app/src/core/models/success.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
+import '../../../../core/models/success.dart';
+import '../domain.dart';
 
 abstract class AuthenticationRepository {
   Future<Either<Failure, User>> signup(Signup signup);

@@ -3,7 +3,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 import 'package:formz_input/formz_input.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
+
+import '../../../domain/domain.dart';
 
 part 'signup_state.dart';
 
@@ -15,7 +16,7 @@ class SignupCubit extends Cubit<SignupState> {
 
   final AuthenticationRepository _authenticationRepository;
 
-  void onFirstNameInput(String firstNameString) {
+  void onFirstNameChanged(String firstNameString) {
     final firstName = Field.dirty(firstNameString);
     emit(
       state.copyWith(
@@ -32,7 +33,7 @@ class SignupCubit extends Cubit<SignupState> {
     );
   }
 
-  void onLastNameInput(String lastNameString) {
+  void onLastNameChanged(String lastNameString) {
     final lastName = Field.dirty(lastNameString);
     emit(
       state.copyWith(
@@ -48,7 +49,7 @@ class SignupCubit extends Cubit<SignupState> {
     );
   }
 
-  void onEmailInput(String emailString) {
+  void onEmailChanged(String emailString) {
     final email = Email.dirty(emailString);
     emit(
       state.copyWith(
@@ -87,7 +88,7 @@ class SignupCubit extends Cubit<SignupState> {
     );
   }
 
-  void onPasswordInput(String passwordString) {
+  void onPasswordChanged(String passwordString) {
     final password = Password.dirty(passwordString);
     final confirmPassword = ConfirmPassword.dirty(
       password: password.value,
@@ -111,7 +112,7 @@ class SignupCubit extends Cubit<SignupState> {
     );
   }
 
-  void onConfirmPasswordInput(String confirmPasswordString) {
+  void onConfirmPasswordChanged(String confirmPasswordString) {
     final confirmPassword = ConfirmPassword.dirty(
       password: state.password.value,
       value: confirmPasswordString,

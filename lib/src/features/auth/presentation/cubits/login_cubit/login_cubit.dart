@@ -1,11 +1,9 @@
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 import 'package:formz_input/formz_input.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
-import 'package:meal_payment_app/src/features/auth/domain/repository/repository.dart';
 
+import '../../../domain/domain.dart';
 
 part 'login_state.dart';
 
@@ -17,7 +15,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   final AuthenticationRepository _authenticationRepository;
 
-  void onEmailInput(String emailString) {
+  void onEmailChanged(String emailString) {
     final email = Email.dirty(emailString);
     emit(
       state.copyWith(
@@ -33,7 +31,7 @@ class LoginCubit extends Cubit<LoginState> {
     );
   }
 
-  void onPasswordInput(String passwordString) {
+  void onPasswordChanged(String passwordString) {
     final password = Password.dirty(passwordString);
     emit(
       state.copyWith(
@@ -74,5 +72,4 @@ class LoginCubit extends Cubit<LoginState> {
       );
     });
   }
-
 }

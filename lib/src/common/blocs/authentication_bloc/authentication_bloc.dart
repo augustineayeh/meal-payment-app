@@ -1,10 +1,9 @@
 import 'dart:async';
 
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
-import 'package:meal_payment_app/src/features/auth/domain/repository/repository.dart';
+
+import '../../../features/auth/domain/domain.dart';
 
 part 'authentication_event.dart';
 part 'authentication_state.dart';

@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
 
-/// {@template signup}
-/// Class which represents a user signing up
-/// {@endtemplate}
+
+
+
 class Signup extends Equatable {
-  /// {@macro signup}
+  
   const Signup({
     required this.firstName,
     this.lastName,

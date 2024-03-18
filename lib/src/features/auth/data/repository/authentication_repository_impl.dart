@@ -1,12 +1,11 @@
 import 'dart:async';
 
-
 import 'package:errors/errors.dart';
 import 'package:fpdart/src/either.dart';
-import 'package:meal_payment_app/src/core/models/success.dart';
-import 'package:meal_payment_app/src/features/auth/data/data.dart';
-import 'package:meal_payment_app/src/features/auth/domain/domain.dart';
-import 'package:meal_payment_app/src/features/auth/domain/repository/repository.dart';
+
+import '../../../../core/models/success.dart';
+import '../../domain/domain.dart';
+import '../data.dart';
 
 class AuthenticationRepositoryImpl extends AuthenticationRepository {
   AuthenticationRepositoryImpl({

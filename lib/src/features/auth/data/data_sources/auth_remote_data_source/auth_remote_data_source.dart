@@ -1,5 +1,5 @@
 
-import 'package:meal_payment_app/src/features/auth/data/data.dart';
+import '../../data.dart';
 
 abstract class AuthenticationRemoteDataSource {
   Future<UserModel> signup(SignupModel signup);

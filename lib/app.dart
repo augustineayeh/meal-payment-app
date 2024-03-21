@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'home.dart';
 
 class App extends StatelessWidget {

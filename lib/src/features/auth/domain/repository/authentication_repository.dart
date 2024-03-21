@@ -1,5 +1,6 @@
 import 'package:errors/errors.dart';
 import 'package:fpdart/fpdart.dart';
+
 import '../../../../core/models/success.dart';
 import '../domain.dart';
 

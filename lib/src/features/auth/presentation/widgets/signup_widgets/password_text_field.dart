@@ -31,8 +31,8 @@ class _PasswordTextFieldState extends State<_PasswordTextField> {
                   return Icon(
                     showPassword ? Icons.visibility_off : Icons.visibility,
                     color: state.themeMode == AppThemeMode.darkMode
-                        ? ColorConsts.white
-                        : ColorConsts.black,
+                        ? Colors.yellow
+                        : Colors.blue,
                   );
                 },
               ),
@@ -49,9 +49,7 @@ class _PasswordTextFieldState extends State<_PasswordTextField> {
             errorText:
                 state.password.displayError != null ? 'invalid password' : null,
             focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorConsts.primaryColor,
-              ),
+              borderSide: const BorderSide(color: Colors.red),
               borderRadius: BorderRadius.circular(5),
             ),
             border: OutlineInputBorder(
@@ -59,7 +57,7 @@ class _PasswordTextFieldState extends State<_PasswordTextField> {
             ),
           ),
           onChanged: (String passwordString) =>
-              context.read<SignupCubit>().onPasswordInput(passwordString),
+              context.read<SignupCubit>().onPasswordChanged(passwordString),
         );
       },
     );

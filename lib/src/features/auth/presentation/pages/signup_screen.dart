@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../common/blocs/theme_cubit/theme_cubit.dart';
 import '../../domain/repository/repository.dart';
 import '../cubits/signup_cubit/signup_cubit.dart';
@@ -14,8 +16,6 @@ part '../widgets/signup_widgets/first_name_text_field.dart';
 part '../widgets/signup_widgets/last_name_text_field.dart';
 part '../widgets/signup_widgets/password_text_field.dart';
 part '../widgets/signup_widgets/signup_button.dart';
-part '../widgets/signup_widgets/signup_with_facebook_button.dart';
-part '../widgets/signup_widgets/signup_with_google_button.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -156,13 +156,13 @@ class SignupScreen extends StatelessWidget {
                             ],
                           ),
                           const Gap(15),
-                          _SignupWithGoogleButton(
-                            constraints: constraints,
-                          ),
-                          const Gap(10),
-                          _SignupWithFacebookButton(
-                            constraints: constraints,
-                          ),
+                          // _SignupWithGoogleButton(
+                          //   constraints: constraints,
+                          // ),
+                          // const Gap(10),
+                          // _SignupWithFacebookButton(
+                          //   constraints: constraints,
+                          // ),
                         ],
                       ),
                     ],

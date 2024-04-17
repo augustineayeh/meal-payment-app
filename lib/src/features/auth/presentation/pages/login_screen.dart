@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../common/widgets/flushbar.dart';
+import '../../../../core/routes/routes.dart';
 import '../../../../common/blocs/theme_cubit/theme_cubit.dart';
 import '../../domain/repository/repository.dart';
 import '../cubits/login_cubit/login_cubit.dart';
 
 part '../widgets/login_widgets/email_text_field.dart';
 part '../widgets/login_widgets/login_button.dart';
-part '../widgets/login_widgets/login_with_facebook_button.dart';
-part '../widgets/login_widgets/login_with_google_button.dart';
+
 part '../widgets/login_widgets/password_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -136,13 +138,13 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                         const Gap(20),
-                        _LoginWithGoogleButton(
-                          constraints: constraints,
-                        ),
+                        // _LoginWithGoogleButton(
+                        //   constraints: constraints,
+                        // ),
                         const Gap(15),
-                        _LoginWithFacebookButton(
-                          constraints: constraints,
-                        ),
+                        // _LoginWithFacebookButton(
+                        //   constraints: constraints,
+                        // ),
                       ],
                     ),
                   );

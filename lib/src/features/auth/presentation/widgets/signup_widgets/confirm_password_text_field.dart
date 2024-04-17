@@ -34,8 +34,8 @@ class _ConfirmPasswordTextFieldState extends State<_ConfirmPasswordTextField> {
                   return Icon(
                     showPassword ? Icons.visibility_off : Icons.visibility,
                     color: state.themeMode == AppThemeMode.darkMode
-                        ? ColorConsts.white
-                        : ColorConsts.black,
+                        ? Colors.red
+                        : Colors.black,
                   );
                 },
               ),
@@ -53,9 +53,7 @@ class _ConfirmPasswordTextFieldState extends State<_ConfirmPasswordTextField> {
                 ? 'passwords do not match'
                 : null,
             focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorConsts.primaryColor,
-              ),
+              borderSide: const BorderSide(color: Colors.red),
               borderRadius: BorderRadius.circular(5),
             ),
             border: OutlineInputBorder(
@@ -64,7 +62,7 @@ class _ConfirmPasswordTextFieldState extends State<_ConfirmPasswordTextField> {
           ),
           onChanged: (String passwordString) => context
               .read<SignupCubit>()
-              .onConfirmPasswordInput(passwordString),
+              .onConfirmPasswordChanged(passwordString),
         );
       },
     );

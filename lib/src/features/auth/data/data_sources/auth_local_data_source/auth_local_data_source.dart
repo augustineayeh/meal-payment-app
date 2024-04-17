@@ -1,7 +1,7 @@
 
 
-import '../../data.dart';
 import '../../../domain/domain.dart';
+import '../../data.dart';
 
 abstract class AuthenticationLocalDataSource {
   Future<void> cacheUser({required UserModel user});

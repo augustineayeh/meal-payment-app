@@ -13,9 +13,7 @@ class _SignupButton extends StatelessWidget {
         builder: (context, state) {
           return ElevatedButton(
             style: ElevatedButton.styleFrom(
-              elevation: 0,
-              backgroundColor: ColorConsts.primaryColor,
-            ),
+                elevation: 0, backgroundColor: Colors.red),
             onPressed: !state.isValid
                 ? null
                 : () => context.read<SignupCubit>().onSignupPressed(),

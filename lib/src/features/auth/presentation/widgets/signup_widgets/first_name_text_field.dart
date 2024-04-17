@@ -27,9 +27,7 @@ class _FirstNameTextField extends StatelessWidget {
                 ? 'invalid first name'
                 : null,
             focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorConsts.primaryColor,
-              ),
+              borderSide: const BorderSide(color: Colors.red),
               borderRadius: BorderRadius.circular(5),
             ),
             border: OutlineInputBorder(
@@ -37,7 +35,7 @@ class _FirstNameTextField extends StatelessWidget {
             ),
           ),
           onChanged: (String firstNameString) =>
-              context.read<SignupCubit>().onFirstNameInput(firstNameString),
+              context.read<SignupCubit>().onFirstNameChanged(firstNameString),
         );
       },
     );

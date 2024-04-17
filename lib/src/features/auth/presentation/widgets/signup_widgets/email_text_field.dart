@@ -26,9 +26,7 @@ class _EmailTextField extends StatelessWidget {
             errorText:
                 state.email.displayError != null ? 'invalid password' : null,
             focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorConsts.primaryColor,
-              ),
+              borderSide: const BorderSide(color: Colors.red),
               borderRadius: BorderRadius.circular(5),
             ),
             border: OutlineInputBorder(
@@ -36,7 +34,7 @@ class _EmailTextField extends StatelessWidget {
             ),
           ),
           onChanged: (String emailString) =>
-              context.read<SignupCubit>().onEmailInput(emailString),
+              context.read<SignupCubit>().onEmailChanged(emailString),
         );
       },
     );

@@ -31,7 +31,7 @@ class _PasswordTextFieldState extends State<_PasswordTextField> {
                   return Icon(
                     showPassword ? Icons.visibility_off : Icons.visibility,
                     color: state.themeMode == AppThemeMode.darkMode
-                        ?Colors.red,
+                        ?Colors.red
                         : Colors.blue,
                   );
                 },

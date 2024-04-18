@@ -1,7 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-
-
 part of 'schools_cubit.dart';
 
 enum SchoolStatus { initial, loading, success, failure }
@@ -35,7 +33,6 @@ class SchoolState extends Equatable {
     School? school,
     List<School>? schools,
     String? errorMessage,
-
   }) {
     return SchoolState(
       name: name ?? this.name,

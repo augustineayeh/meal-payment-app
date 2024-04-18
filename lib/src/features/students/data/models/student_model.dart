@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meal_payment_app/src/features/students/domain/entities/student.dart';
+
+import '../../domain/entities/student.dart';
 
 part 'student_model.g.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:gap/gap.dart';
-import 'package:meal_payment_app/src/core/dummy/models/vendor.dart';
-import 'package:meal_payment_app/src/core/dummy/pages/vendor_details_page.dart';
+import '../models/vendor.dart';
+import 'vendor_details_page.dart';
 
 import 'school_detail_page.dart';
 

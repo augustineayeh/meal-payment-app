@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:meal_payment_app/src/core/dummy/models/meal.dart';
-import 'package:meal_payment_app/src/core/dummy/models/vendor.dart';
-import 'package:meal_payment_app/src/core/dummy/pages/meal_detail_page.dart';
-import 'package:meal_payment_app/src/core/dummy/pages/vendor_details_page.dart';
+
+import '../models/meal.dart';
+import '../models/vendor.dart';
+import 'meal_detail_page.dart';
+import 'vendor_details_page.dart';
 
 class StudentsHomePage extends StatelessWidget {
   const StudentsHomePage({super.key});

@@ -1,5 +1,6 @@
 
 import 'package:json_annotation/json_annotation.dart';
+
 import '../../domain/domain.dart';
 
 part 'signup_model.g.dart';

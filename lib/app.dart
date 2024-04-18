@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meal_payment_app/src/core/dummy/pages/schools_page.dart';
+
+import 'src/core/dummy/pages/schools_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

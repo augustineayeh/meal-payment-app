@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../features/auth/presentation/pages/pages.dart';
 
+import '../../features/auth/presentation/pages/pages.dart';
 import 'route_consts.dart';
 
 class AppRouter {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+
 import '../models/meal.dart';
 import 'meal_detail_page.dart';
 

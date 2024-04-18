@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:formz_input/formz_input.dart';
+
 import '../../domain/entities/school.dart';
 import '../../domain/repositories/school_repository.dart';
 

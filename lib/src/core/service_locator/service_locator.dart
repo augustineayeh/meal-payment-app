@@ -1,10 +1,10 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
-import 'package:meal_payment_app/src/features/vendors/data/datasources/remote_data_source/remote_data_source.dart';
-import 'package:meal_payment_app/src/features/vendors/data/datasources/remote_data_source/remote_data_source_impl.dart';
-import 'package:meal_payment_app/src/features/vendors/data/repositories/vendor_repository_impl.dart';
-import 'package:meal_payment_app/src/features/vendors/domain/repositories/vendor_repository.dart';
+import '../../features/vendors/data/datasources/remote_data_source/remote_data_source.dart';
+import '../../features/vendors/data/datasources/remote_data_source/remote_data_source_impl.dart';
+import '../../features/vendors/data/repositories/vendor_repository_impl.dart';
+import '../../features/vendors/domain/repositories/vendor_repository.dart';
 import 'package:secure_storage_repository/storage_repository.dart';
 
 import '../../features/schools/data/datasources/remote_data_source/remote_data_source.dart';

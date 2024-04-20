@@ -1,5 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class Vendor {
+class VendorDummy {
   final String name;
   final String school;
   final String imageUrl;
@@ -7,7 +7,7 @@ class Vendor {
   final String email;
   final double rating;
   final List menu;
-  Vendor({
+  VendorDummy({
     required this.name,
     required this.school,
     required this.imageUrl,
@@ -18,11 +18,11 @@ class Vendor {
   });
 }
 
-final List<Vendor> vendors = [
-  Vendor(
+final List<VendorDummy> vendors = [
+  VendorDummy(
     name: 'Alice Ababio',
     school: 'Ghana Int. School',
-    imageUrl: 'assets/vendor3.avif',
+    imageUrl: 'assets/VendorDummy3.avif',
     rating: 4.4,
     email: 'alice123@gmail.com',
     phone: '0241234567',
@@ -33,10 +33,10 @@ final List<Vendor> vendors = [
       'Solobo & Meatpie',
     ],
   ),
-  Vendor(
+  VendorDummy(
     name: 'Alice Ababio',
     school: 'Tema Int. School',
-    imageUrl: 'assets/vendor1.avif',
+    imageUrl: 'assets/VendorDummy1.avif',
     rating: 4.4,
     email: 'alice123@gmail.com',
     phone: '0241234567',
@@ -47,10 +47,10 @@ final List<Vendor> vendors = [
       'Solobo & Meatpie',
     ],
   ),
-  Vendor(
+  VendorDummy(
     name: 'Alice Ababio',
     school: 'British Int. School',
-    imageUrl: 'assets/vendor4.avif',
+    imageUrl: 'assets/VendorDummy4.avif',
     rating: 4.4,
     email: 'alice123@gmail.com',
     phone: '0241234567',
@@ -61,10 +61,10 @@ final List<Vendor> vendors = [
       'Solobo & Meatpie',
     ],
   ),
-  Vendor(
+  VendorDummy(
     name: 'Alice Ababio',
     school: 'Tepas School',
-    imageUrl: 'assets/vendor2.avif',
+    imageUrl: 'assets/VendorDummy2.avif',
     rating: 4.4,
     email: 'alice123@gmail.com',
     phone: '0241234567',
@@ -75,10 +75,10 @@ final List<Vendor> vendors = [
       'Solobo & Meatpie',
     ],
   ),
-  Vendor(
+  VendorDummy(
     name: 'Alice Ababio',
     school: 'Galaxy Int. School',
-    imageUrl: 'assets/vendor5.avif',
+    imageUrl: 'assets/VendorDummy5.avif',
     rating: 4.4,
     email: 'alice123@gmail.com',
     phone: '0241234567',

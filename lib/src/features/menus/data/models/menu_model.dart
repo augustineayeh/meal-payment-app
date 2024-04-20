@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meal_payment_app/src/features/menus/domain/entities/menu.dart';
+import '../../domain/entities/menu.dart';
 
 part 'menu_model.g.dart';
 

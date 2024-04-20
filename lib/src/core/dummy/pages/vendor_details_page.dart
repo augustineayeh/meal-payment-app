@@ -5,13 +5,13 @@ import 'package:meal_payment_app/src/core/dummy/models/meal.dart';
 import 'package:meal_payment_app/src/core/dummy/models/vendor.dart';
 import 'package:meal_payment_app/src/core/dummy/pages/meal_detail_page.dart';
 
-class VendorDetailPage extends StatelessWidget {
-  const VendorDetailPage({
+class VendorDetailPageDummy extends StatelessWidget {
+  const VendorDetailPageDummy({
     super.key,
     required this.vendor,
   });
 
-  final Vendor vendor;
+  final VendorDummy vendor;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +94,7 @@ class VendorDetailPage extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    MealDetailPage(meal: meals[index]),
+                                    MealDetailPageDummy(meal: meals[index]),
                               ),
                             );
                           },

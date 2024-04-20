@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'src/features/schools/presentation/pages/schools_page.dart';
 
 import 'src/core/dummy/pages/schools_page.dart';
 
@@ -14,7 +15,7 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const AdminHomePage(),
+      home: const SchoolsPage(),
     );
   }
 }

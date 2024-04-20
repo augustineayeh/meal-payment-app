@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import '../models/meal.dart';
 import 'meal_detail_page.dart';
 
-class MealsPage extends StatelessWidget {
-  const MealsPage({super.key});
+class MealsPageDummy extends StatelessWidget {
+  const MealsPageDummy({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class MealsPage extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  MealDetailPage(meal: meals[index]),
+                                  MealDetailPageDummy(meal: meals[index]),
                             ));
                       },
                       child: Card(

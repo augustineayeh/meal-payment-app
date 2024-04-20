@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:meal_payment_app/src/core/dummy/models/meal.dart';
 import 'package:meal_payment_app/src/core/dummy/pages/school_detail_page.dart';
 
-class MealDetailPage extends StatefulWidget {
-  const MealDetailPage({
+class MealDetailPageDummy extends StatefulWidget {
+  const MealDetailPageDummy({
     super.key,
     required this.meal,
   });
@@ -13,10 +13,10 @@ class MealDetailPage extends StatefulWidget {
   final Meal meal;
 
   @override
-  State<MealDetailPage> createState() => _MealDetailPageState();
+  State<MealDetailPageDummy> createState() => _MealDetailPageDummyState();
 }
 
-class _MealDetailPageState extends State<MealDetailPage> {
+class _MealDetailPageDummyState extends State<MealDetailPageDummy> {
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {

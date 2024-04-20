@@ -1,39 +1,39 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class School {
+class SchoolDummy {
   final String name;
   final String imageUrl;
   final String location;
-  School({
+  SchoolDummy({
     required this.name,
     required this.imageUrl,
     required this.location,
   });
 }
 
-final List<School> schools = [
-  School(
-      name: 'Queensland Int. School',
+final List<SchoolDummy> schools = [
+  SchoolDummy(
+      name: 'Queensland Int. SchoolDummy',
       imageUrl: 'assets/school1.avif',
       location: 'Tema'),
-  School(
-    name: 'Datus School',
+  SchoolDummy(
+    name: 'Datus SchoolDummy',
     imageUrl: 'assets/school2.avif',
     location: 'Dansoman',
   ),
-  School(
-      name: 'St. Paul\'s School',
+  SchoolDummy(
+      name: 'St. Paul\'s SchoolDummy',
       imageUrl: 'assets/school3.avif',
       location: 'Adenta'),
-  School(
-      name: 'British Int School',
+  SchoolDummy(
+      name: 'British Int SchoolDummy',
       imageUrl: 'assets/school4.avif',
       location: 'East Airport'),
-  School(
-      name: 'Tema Int. School',
+  SchoolDummy(
+      name: 'Tema Int. SchoolDummy',
       imageUrl: 'assets/school5.avif',
       location: 'Tema'),
-  School(
-      name: 'Ghana Int. School',
+  SchoolDummy(
+      name: 'Ghana Int. SchoolDummy',
       imageUrl: 'assets/school6.avif',
       location: 'Cantoment'),
 ];

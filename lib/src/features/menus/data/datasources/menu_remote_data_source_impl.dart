@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:errors/errors.dart';
-import 'package:meal_payment_app/src/core/api/api_client.dart';
-import 'package:meal_payment_app/src/core/api/api_constants.dart';
-import 'package:meal_payment_app/src/features/menus/data/datasources/menu_remote_data_source.dart';
-import 'package:meal_payment_app/src/features/menus/data/models/menu_model.dart';
+import '../../../../core/api/api_client.dart';
+import '../../../../core/api/api_constants.dart';
+import 'menu_remote_data_source.dart';
+import '../models/menu_model.dart';
 
 class MenuRemoteDataSourceImpl extends MenuRemoteDataSource {
   MenuRemoteDataSourceImpl({

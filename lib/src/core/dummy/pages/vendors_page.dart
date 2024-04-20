@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:gap/gap.dart';
-import '../models/vendor.dart';
-import 'vendor_details_page.dart';
 
+import '../models/vendor.dart';
 import 'school_detail_page.dart';
+import 'vendor_details_page.dart';
 
 class VendorsPage extends StatelessWidget {
   const VendorsPage({super.key});
@@ -78,7 +78,7 @@ class VendorsView extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            VendorDetailPage(vendor: vendors[index]),
+                            VendorDetailPageDummy(vendor: vendors[index]),
                       ));
                 },
                 child: Slidable(

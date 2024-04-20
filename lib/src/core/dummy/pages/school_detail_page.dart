@@ -12,7 +12,7 @@ class SchoolDetailPage extends StatefulWidget {
     required this.school,
   });
 
-  final School school;
+  final SchoolDummy school;
 
   @override
   State<SchoolDetailPage> createState() => _SchoolDetailPageState();
@@ -97,7 +97,7 @@ class MealsView extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            MealDetailPage(meal: meals[index]),
+                            MealDetailPageDummy(meal: meals[index]),
                       ));
                 },
                 child: Card(

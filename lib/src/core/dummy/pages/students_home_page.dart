@@ -35,7 +35,7 @@ class StudentsHomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => VendorDetailPage(
+                            builder: (context) => VendorDetailPageDummy(
                               vendor: vendors[index],
                             ),
                           ),
@@ -78,7 +78,7 @@ class StudentsHomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MealDetailPage(
+                            builder: (context) => MealDetailPageDummy(
                               meal: meals[index],
                             ),
                           ),
@@ -116,7 +116,7 @@ class StudentsHomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                MealDetailPage(meal: meals[index]),
+                                MealDetailPageDummy(meal: meals[index]),
                           ),
                         );
                       },

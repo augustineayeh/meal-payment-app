@@ -4,10 +4,8 @@ import 'dart:io';
 
 import 'package:errors/errors.dart';
 import 'package:http/http.dart';
+import 'api_constants.dart';
 import 'package:secure_storage_repository/storage_repository.dart';
-
-
-
 
 class ApiClient {
   ApiClient({
@@ -18,7 +16,7 @@ class ApiClient {
   final Client _client;
   final SecureStorageRepository _secureStorageRepository;
 
-  final baseUrl = '';
+  final baseUrl = ApiConstants.baseUrl;
 
   Future<Map<String, String>> _getHeaders() async {
     return {
@@ -27,13 +25,11 @@ class ApiClient {
   }
 
   Future<Map<String, String>> _getHeadersWithToken() async {
-    final token = await _secureStorageRepository.read(
-      key: 'token',
-    );
-    print('TOKEN=====> $token');
+    // final token = await _secureStorageRepository.read(key: 'token');
+
     return {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer $token'
+      'Authorization': 'Token ${ApiConstants.token}'
     };
   }
 
@@ -44,7 +40,7 @@ class ApiClient {
     return _sendRequest(() async {
       final Map<String, String> headers = await _getHeadersWithToken();
       final uri = Uri.parse('$baseUrl$endpoint$path');
-      print('$baseUrl$endpoint');
+
       final response = await _client.get(uri, headers: headers);
       return response;
     });
@@ -57,11 +53,7 @@ class ApiClient {
     return _sendRequest(() async {
       final headers = await _getHeadersWithToken();
       final uri = Uri.parse('$baseUrl$endpoint');
-      print('$baseUrl$endpoint');
-      
-      
-      
-      
+
       final response = await _client
           .post(
             uri,
@@ -102,10 +94,8 @@ class ApiClient {
     return _sendRequest(() async {
       final headers = await _getHeaders();
       final uri = Uri.parse('$baseUrl$endpoint');
-      
-      
+
       final toJson = await model.toJson();
-      
 
       final response = await _client
           .post(
@@ -131,9 +121,7 @@ class ApiClient {
       final Map<String, dynamic> headers = await _getHeadersWithToken();
       final uri = Uri.parse('$baseUrl$endpoint$id');
       print('$baseUrl$endpoint\n');
-      
-      
-      
+
       final response = await _client
           .put(
             uri,
@@ -179,7 +167,8 @@ class ApiClient {
 
       return response;
     } on TimeoutException {
-      throw ServerException(errorMessage: 'Timeout making request to server');
+      throw const ServerException(
+          errorMessage: 'Timeout making request to server');
     } on SocketException {
       throw const ServerException(errorMessage: 'No internet');
     } on ServerException catch (e) {

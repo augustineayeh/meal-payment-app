@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:errors/errors.dart';
-import 'package:meal_payment_app/src/core/api/api_client.dart';
-import 'package:meal_payment_app/src/core/api/api_constants.dart';
-import 'package:meal_payment_app/src/features/vendors/data/datasources/remote_data_source/remote_data_source.dart';
-import 'package:meal_payment_app/src/features/vendors/data/models/vendor_model.dart';
+import '../../../../../core/api/api_client.dart';
+import '../../../../../core/api/api_constants.dart';
+import 'remote_data_source.dart';
+import '../../models/vendor_model.dart';
 
 class VendorRemoteDataSourceImpl extends VendorRemoteDataSource {
   VendorRemoteDataSourceImpl({

@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+
 import '../../domain/entities/school.dart';
 
 part 'school_model.g.dart';
@@ -7,9 +8,11 @@ part 'school_model.g.dart';
 class SchoolModel extends School {
   const SchoolModel({
     required super.name,
+    super.id,
     required super.location,
     required this.phoneNumber,
     required super.email,
+    required super.image,
   }) : super(phoneNumber: phoneNumber);
 
   @override

@@ -56,6 +56,8 @@ dependencies:
   flutter_slidable: ^3.1.0
   build_runner: ^2.4.9
   json_serializable: ^6.7.1
+  get_it: ^7.7.0
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:

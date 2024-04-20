@@ -1,10 +1,11 @@
 import 'dart:convert';
 
 import 'package:errors/errors.dart';
+
 import '../../../../../core/api/api_client.dart';
 import '../../../../../core/api/api_constants.dart';
-import 'remote_data_source.dart';
 import '../../models/school_model.dart';
+import 'remote_data_source.dart';
 
 class SchoolRemoteDataSourceImpl extends SchoolRemoteDataSource {
   SchoolRemoteDataSourceImpl({

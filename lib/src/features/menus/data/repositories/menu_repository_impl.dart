@@ -1,9 +1,9 @@
 import 'package:errors/errors.dart';
 import 'package:fpdart/fpdart.dart';
-import '../datasources/menu_remote_data_source.dart';
 
 import '../../domain/entities/menu.dart';
 import '../../domain/repositories/menu_repository.dart';
+import '../datasources/menu_remote_data_source.dart';
 
 class MenuRepositoryImpl extends MenuRepository {
   MenuRepositoryImpl({required MenuRemoteDataSource remoteDataSource})

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'src/features/schools/presentation/pages/schools_page.dart';
 
-import 'src/core/dummy/pages/schools_page.dart';
+import 'src/features/schools/presentation/pages/schools_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

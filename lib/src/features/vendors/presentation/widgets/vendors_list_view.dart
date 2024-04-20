@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+
 import '../../../../core/service_locator/service_locator.dart';
 import '../../domain/entities/vendor.dart';
 import '../../domain/repositories/vendor_repository.dart';
-
 import '../cubit/vendors_cubit.dart';
 
 class VendorsList extends StatelessWidget {

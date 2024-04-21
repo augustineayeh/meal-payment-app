@@ -9,30 +9,36 @@ class SchoolState extends Equatable {
     this.name = const Field.pure(),
     this.location = const Field.pure(),
     this.phoneNumber = const Field.pure(),
-    this.email = const Field.pure(),
+    this.email = const Email.pure(),
     this.status = SchoolStatus.initial,
     this.school = School.empty,
     this.schools = const <School>[],
+    this.formStatus = FormzSubmissionStatus.initial,
+    this.isValid = false,
     this.errorMessage,
   });
   final Field name;
   final Field location;
   final Field phoneNumber;
-  final Field email;
+  final Email email;
   final SchoolStatus status;
   final School school;
   final List<School> schools;
   final String? errorMessage;
+  final FormzSubmissionStatus formStatus;
+  final bool isValid;
 
   SchoolState copyWith({
     Field? name,
     Field? location,
     Field? phoneNumber,
-    Field? email,
+    Email? email,
     SchoolStatus? status,
     School? school,
     List<School>? schools,
     String? errorMessage,
+    bool? isValid,
+    FormzSubmissionStatus? formStatus,
   }) {
     return SchoolState(
       name: name ?? this.name,
@@ -43,6 +49,8 @@ class SchoolState extends Equatable {
       school: school ?? this.school,
       schools: schools ?? this.schools,
       errorMessage: errorMessage ?? errorMessage,
+      isValid: isValid ?? this.isValid,
+      formStatus: formStatus ?? this.formStatus,
     );
   }
 
@@ -57,6 +65,8 @@ class SchoolState extends Equatable {
       school,
       schools,
       errorMessage,
+      isValid,
+      formStatus,
     ];
   }
 }

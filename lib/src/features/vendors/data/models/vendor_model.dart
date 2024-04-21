@@ -12,15 +12,25 @@ class VendorModel extends Vendor {
     required this.location,
     required this.phoneNumber,
     required this.school,
+    this.id,
+    this.image,
   }) : super(
           name: name,
           location: location,
           phoneNumber: phoneNumber,
           school: school,
+          id: id,
+          image: image,
         );
 
   @override
   final String name;
+  @override
+  final String? id;
+
+  @override
+  final String? image;
+
   @override
   final String location;
   @override

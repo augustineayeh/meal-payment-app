@@ -3,6 +3,8 @@ import 'package:equatable/equatable.dart';
 
 class Vendor extends Equatable {
   final String name;
+  final String? id;
+  final String? image;
   final String location;
   final String phoneNumber;
   final String school;
@@ -10,12 +12,16 @@ class Vendor extends Equatable {
     required this.name,
     required this.location,
     required this.phoneNumber,
+    this.id,
+    this.image,
     required this.school,
   });
 
   @override
-  List<Object> get props => [
+  List<Object?> get props => [
         name,
+        id,
+        image,
         location,
         phoneNumber,
         school,
@@ -26,5 +32,7 @@ class Vendor extends Equatable {
     location: '',
     phoneNumber: '',
     school: '',
+    id: '',
+    image: '',
   );
 }

@@ -1,5 +1,9 @@
+// ignore_for_file: overridden_fields
+
 import 'package:json_annotation/json_annotation.dart';
+
 import '../../domain/entities/parent.dart';
+
 part 'parent_model.g.dart';
 
 @JsonSerializable()
@@ -12,11 +16,12 @@ class ParentModel extends Parent {
     required super.location,
     required this.wards,
   }) : super(
-            firstName: firstName,
-            fullName: fullName,
-            wards: wards,
-            middleName: middleName,
-            lastName: lastName);
+          firstName: firstName,
+          fullName: fullName,
+          wards: wards,
+          middleName: middleName,
+          lastName: lastName,
+        );
 
   @override
   @JsonKey(name: 'first_name')

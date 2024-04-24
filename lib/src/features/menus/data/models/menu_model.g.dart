@@ -7,10 +7,11 @@ part of 'menu_model.dart';
 // **************************************************************************
 
 MenuModel _$MenuModelFromJson(Map<String, dynamic> json) => MenuModel(
+      id: json['id'] as String,
       name: json['name'] as String,
-      details: json['details'] as String,
+      details: json['details'] as List<dynamic>,
       dateCreated: json['date_created'] as String,
-      price: json['price'] as int,
+      price: json['price'] as double,
       vendorId: json['vendor'] as String,
       days: json['days'] as String,
     );

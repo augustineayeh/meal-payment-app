@@ -9,15 +9,19 @@ class MenuModel extends Menu {
   const MenuModel({
     required super.name,
     required super.details,
-    required this.dateCreated,
+    this.dateCreated,
     required super.price,
     required this.vendorId,
     required super.days,
-  }) : super(dateCreated: dateCreated, vendorId: vendorId);
+    required super.id,
+  }) : super(
+          dateCreated: dateCreated,
+          vendorId: vendorId,
+        );
 
   @override
   @JsonKey(name: 'date_created')
-  final String dateCreated;
+  final String? dateCreated;
 
   @override
   @JsonKey(name: 'vendor')

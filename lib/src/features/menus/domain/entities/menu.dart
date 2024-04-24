@@ -2,24 +2,24 @@
 import 'package:equatable/equatable.dart';
 
 class Menu extends Equatable {
-  final String? id;
-  final String name;
-  final String details;
-  final String? image;
-  final String dateCreated;
-  final int price;
-  final String vendorId;
-  final String days;
   const Menu({
-    this.id,
+   required this.id,
     required this.name,
     required this.details,
     this.image,
-    required this.dateCreated,
+    this.dateCreated,
     required this.price,
     required this.vendorId,
     required this.days,
   });
+  final String id;
+  final String name;
+  final List<dynamic> details;
+  final String? image;
+  final String? dateCreated;
+  final double price;
+  final String vendorId;
+  final String days;
 
   static const empty = Menu(
     name: '',
@@ -27,7 +27,8 @@ class Menu extends Equatable {
     vendorId: '',
     days: '',
     dateCreated: '',
-    details: '',
+    details: [],
+    id: '',
   );
 
   @override

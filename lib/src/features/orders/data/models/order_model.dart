@@ -1,10 +1,11 @@
 import 'package:json_annotation/json_annotation.dart';
+
 import '../../domain/entities/order.dart';
 
 part 'order_model.g.dart';
 
 @JsonSerializable()
-class OrderModel extends Order {
+class OrderModel extends OrderEntity {
   const OrderModel({
     required this.itemOrdered,
     super.id,

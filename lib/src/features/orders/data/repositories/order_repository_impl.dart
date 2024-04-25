@@ -1,11 +1,11 @@
 import 'package:errors/errors.dart';
 import 'package:fpdart/fpdart.dart';
-import '../../../../core/models/success.dart';
-import '../models/order_model.dart';
 
+import '../../../../core/models/success.dart';
 import '../../domain/entities/order.dart';
 import '../../domain/repositories/order_repository.dart';
 import '../datasources/remote_data_source/remote_data_source.dart';
+import '../models/order_model.dart';
 
 class OrderRepositoryImpl extends OrderRepository {
   OrderRepositoryImpl({required OrderRemoteDataSource remoteDataSource})
@@ -29,7 +29,7 @@ class OrderRepositoryImpl extends OrderRepository {
   }
 
   @override
-  Future<Either<Failure, List<Order>>> fetchOrders() async {
+  Future<Either<Failure, List<OrderEntity>>> fetchOrders() async {
     try {
       final remoteData = await _remoteDataSource.fetchOrders();
 
@@ -42,7 +42,7 @@ class OrderRepositoryImpl extends OrderRepository {
   }
 
   @override
-  Future<Either<Failure, Order>> fetchSingleOrder(String orderId) async {
+  Future<Either<Failure, OrderEntity>> fetchSingleOrder(String orderId) async {
     try {
       final remoteData = await _remoteDataSource.fetchSingleOrder(orderId);
       return right(remoteData);

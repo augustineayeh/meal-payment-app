@@ -1,19 +1,19 @@
 import 'package:equatable/equatable.dart';
 
-class Order extends Equatable {
+class OrderEntity extends Equatable {
   final String? id;
   final String itemOrdered;
   final String dateOrdered;
   final String orderedBy;
 
-  const Order({
+  const OrderEntity({
     this.id,
     required this.itemOrdered,
     required this.dateOrdered,
     required this.orderedBy,
   });
 
-  static const empty = Order(
+  static const empty = OrderEntity(
     itemOrdered: '',
     dateOrdered: '',
     orderedBy: '',

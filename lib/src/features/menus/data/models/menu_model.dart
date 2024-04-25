@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields
+
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../domain/entities/menu.dart';

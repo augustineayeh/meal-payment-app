@@ -10,7 +10,7 @@ VendorModel _$VendorModelFromJson(Map<String, dynamic> json) => VendorModel(
       name: json['name'] as String,
       location: json['location'] as String,
       phoneNumber: json['phone_number'] as String,
-      school: json['school'] as String,
+      school: json['school'] as List<dynamic>,
       id: json['id'] as String?,
       image: json['image'] as String?,
     );

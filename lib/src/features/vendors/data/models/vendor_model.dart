@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, overridden_fields
 
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meal_payment_app/src/features/vendors/domain/entities/vendor.dart';
@@ -37,7 +37,7 @@ class VendorModel extends Vendor {
   @JsonKey(name: 'phone_number')
   final String phoneNumber;
   @override
-  final String school;
+  final List<dynamic> school;
 
   factory VendorModel.fromJson(Map<String, dynamic> json) =>
       _$VendorModelFromJson(json);

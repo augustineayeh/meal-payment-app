@@ -2,8 +2,9 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:formz/formz.dart';
 import 'package:formz_input/formz_input.dart';
-import '../../data/models/vendor_model.dart';
 
+import '../../../schools/domain/entities/school.dart';
+import '../../data/models/vendor_model.dart';
 import '../../domain/entities/vendor.dart';
 import '../../domain/repositories/vendor_repository.dart';
 
@@ -105,6 +106,26 @@ class VendorCubit extends Cubit<VendorState> {
     );
   }
 
+  // void onSchoolChanged(String schoolInput) {
+  //   final school = Field.dirty(schoolInput);
+  //   emit(
+  //     state.copyWith(
+  //       school: school.value,
+  //       isValid: Formz.validate(
+  //         [
+  //           school,
+  //           state.name,
+  //           state.location,
+  //           state.phoneNumber,
+  //           // state.image,
+  //           // state.school,
+  //         ],
+  //       ),
+  //       formStatus: FormzSubmissionStatus.initial,
+  //     ),
+  //   );
+  // }
+
   void onPhoneNumberChanged(String phoneNumberInput) {
     final phoneNumber = Field.dirty(phoneNumberInput);
     emit(
@@ -124,34 +145,16 @@ class VendorCubit extends Cubit<VendorState> {
     );
   }
 
-  void onSchoolChanged(String schoolInput) {
-    const school = Field.dirty('3608f31b-7c1d-47f6-bbad-073ef3f7b5ba');
-    emit(
-      state.copyWith(
-        school: school,
-        isValid: Formz.validate(
-          [
-            state.name,
-            state.location,
-            state.phoneNumber,
-            //  state.image,
-            // school,
-          ],
-        ),
-        formStatus: FormzSubmissionStatus.initial,
-      ),
-    );
-  }
-
-  void createVendor() async {
+  void createVendor(School school) async {
     final vendor = VendorModel(
       name: state.name.value,
       location: state.location.value,
       phoneNumber: state.phoneNumber.value,
-      school: state.school.value,
-      // image: state.image.value,
+      // school: school.id!,
+      school: const ['1f0255b9-d768-4e62-8121-900babfdf667'],
+      image:
+          'https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg',
     );
-    // print(school.toJson());
 
     final failureOrSuccess =
         await _vendorRepository.createVendor(vendor: vendor);

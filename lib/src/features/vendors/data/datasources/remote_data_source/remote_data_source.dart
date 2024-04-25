@@ -1,5 +1,4 @@
 import '../../../../../core/models/success.dart';
-
 import '../../models/vendor_model.dart';
 
 abstract class VendorRemoteDataSource {

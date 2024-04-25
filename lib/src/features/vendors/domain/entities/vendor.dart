@@ -7,7 +7,7 @@ class Vendor extends Equatable {
   final String? image;
   final String location;
   final String phoneNumber;
-  final String school;
+  final List<dynamic> school;
   const Vendor({
     required this.name,
     required this.location,
@@ -31,7 +31,7 @@ class Vendor extends Equatable {
     name: '',
     location: '',
     phoneNumber: '',
-    school: '',
+    school: [],
     id: '',
     image: '',
   );

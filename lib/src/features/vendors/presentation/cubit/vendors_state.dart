@@ -11,7 +11,7 @@ class VendorState extends Equatable {
     this.location = const Field.pure(),
     this.phoneNumber = const Field.pure(),
     this.status = VendorStatus.initial,
-    this.school = const Field.pure(),
+    this.school = School.empty,
     this.vendor = Vendor.empty,
     this.vendors = const <Vendor>[],
     this.formStatus = FormzSubmissionStatus.initial,
@@ -22,9 +22,8 @@ class VendorState extends Equatable {
   final Field location;
   final Field image;
   final Field phoneNumber;
-
   final VendorStatus status;
-  final Field school;
+  final School school;
   final Vendor vendor;
   final FormzSubmissionStatus formStatus;
   final bool isValid;
@@ -37,7 +36,7 @@ class VendorState extends Equatable {
     Field? phoneNumber,
     Field? image,
     VendorStatus? status,
-    Field? school,
+    School? school,
     Vendor? vendor,
     List<Vendor>? vendors,
     String? errorMessage,

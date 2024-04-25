@@ -1,34 +1,42 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:meal_payment_app/src/features/vendors/presentation/pages/vendor_details_page.dart';
 
 import '../../../../core/service_locator/service_locator.dart';
 import '../../domain/entities/vendor.dart';
 import '../../domain/repositories/vendor_repository.dart';
 import '../cubit/vendors_cubit.dart';
 
-class VendorsList extends StatelessWidget {
-  const VendorsList({super.key});
+class HorizontalVendorsList2 extends StatelessWidget {
+  const HorizontalVendorsList2({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
           VendorCubit(vendorRepository: locator<VendorRepository>()),
-      child: const VendorsListView(),
+      child: const HorizontalVendorsList2View(),
     );
   }
 }
 
-class VendorsListView extends StatefulWidget {
-  const VendorsListView({super.key});
+class HorizontalVendorsList2View extends StatefulWidget {
+  const HorizontalVendorsList2View({
+    super.key,
+  });
 
   @override
-  State<VendorsListView> createState() => _VendorsListViewState();
+  State<HorizontalVendorsList2View> createState() =>
+      _HorizontalVendorsList2ViewState();
 }
 
-class _VendorsListViewState extends State<VendorsListView> {
+class _HorizontalVendorsList2ViewState
+    extends State<HorizontalVendorsList2View> {
   @override
   void initState() {
     super.initState();
@@ -47,8 +55,8 @@ class _VendorsListViewState extends State<VendorsListView> {
                   child: Text('No vendors have been registered yet'),
                 );
               }
-              return VendorsLoaded(
-                vendors: state.vendors,
+              return _HorizontalVendorsList2ViewLoaded(
+                vendors: state.vendors.reversed.toList(),
                 constraints: constraints,
               );
             } else if (state.status == VendorStatus.loading) {
@@ -66,8 +74,8 @@ class _VendorsListViewState extends State<VendorsListView> {
   }
 }
 
-class VendorsLoaded extends StatelessWidget {
-  const VendorsLoaded({
+class _HorizontalVendorsList2ViewLoaded extends StatelessWidget {
+  const _HorizontalVendorsList2ViewLoaded({
     super.key,
     required this.vendors,
     required this.constraints,
@@ -79,7 +87,7 @@ class VendorsLoaded extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 160,
+      height: 140,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
@@ -87,66 +95,55 @@ class VendorsLoaded extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 160,
+                height: 140,
                 width: 146 * 3,
                 child: ListView.separated(
                   shrinkWrap: true,
                   separatorBuilder: (context, index) => const SizedBox(
                     width: 16,
                   ),
-                  itemCount: 3,
+                  itemCount: vendors.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        vendors[index].location != null
-                            ? Container(
-                                height: 130,
-                                width: 130,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(
-                                      vendors[index].location,
-                                    ),
-                                  ),
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                              )
-                            : Image.asset(
-                                'assets/user-chef.png',
-                                height: 80,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => VendorDetailsPage(
+                                vendorId: vendors[index].id!,
                               ),
-                        const Gap(8),
-                        Text(vendors[index].name),
-                      ],
+                            ));
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          vendors[index].image != null
+                              ? Container(
+                                  height: 80,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: NetworkImage(
+                                        vendors[index].image!,
+                                      ),
+                                    ),
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                )
+                              : Image.asset(
+                                  'assets/user-chef.png',
+                                  height: 80,
+                                ),
+                          const Gap(8),
+                          Text(vendors[index].name),
+                        ],
+                      ),
                     );
                   },
                 ),
               ),
-              if (vendors.length > 3)
-                Opacity(
-                  opacity: 0.5,
-                  child: Container(
-                    height: 130,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: NetworkImage(vendors[3].location),
-                      ),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'View all',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ),
             ],
           ),
         ],

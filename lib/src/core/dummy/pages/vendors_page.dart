@@ -6,8 +6,8 @@ import '../models/vendor.dart';
 import 'school_detail_page.dart';
 import 'vendor_details_page.dart';
 
-class VendorsPage extends StatelessWidget {
-  const VendorsPage({super.key});
+class VendorsPageDummy extends StatelessWidget {
+  const VendorsPageDummy({super.key});
 
   @override
   Widget build(BuildContext context) {

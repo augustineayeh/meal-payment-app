@@ -5,8 +5,8 @@ import 'package:gap/gap.dart';
 import '../models/school.dart';
 import 'school_detail_page.dart';
 
-class AdminHomePage extends StatelessWidget {
-  const AdminHomePage({super.key});
+class AdminHomePageDummy extends StatelessWidget {
+  const AdminHomePageDummy({super.key});
 
   @override
   Widget build(BuildContext context) {

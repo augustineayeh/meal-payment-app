@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:errors/errors.dart';
-import '../../../../../core/models/success.dart';
 
 import '../../../../../core/api/api_client.dart';
 import '../../../../../core/api/api_constants.dart';
+import '../../../../../core/models/success.dart';
 import '../../models/vendor_model.dart';
 import 'remote_data_source.dart';
 
@@ -51,7 +51,7 @@ class VendorRemoteDataSourceImpl extends VendorRemoteDataSource {
   Future<Success> createVendor({required VendorModel vendor}) async {
     try {
       final response = await _apiClient.post(
-        endpoint: ApiConstants.schools,
+        endpoint: ApiConstants.vendors,
         model: vendor,
       );
 
@@ -62,20 +62,4 @@ class VendorRemoteDataSourceImpl extends VendorRemoteDataSource {
       throw ServerException(errorMessage: e.toString());
     }
   }
-  
-
-
-
-
-
-  }
-
-
-
-
-
-
-
-
-
-
+}

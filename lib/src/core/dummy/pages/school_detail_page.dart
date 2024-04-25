@@ -153,13 +153,13 @@ class BlueButton extends StatelessWidget {
   });
 
   final String text;
-  final void Function()? onPressed;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 50,
+      height: 60,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(

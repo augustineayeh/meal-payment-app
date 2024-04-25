@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields
+
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../domain/entities/school.dart';
@@ -12,7 +14,7 @@ class SchoolModel extends School {
     required super.location,
     required this.phoneNumber,
     required super.email,
-    required super.image,
+    super.image,
   }) : super(phoneNumber: phoneNumber);
 
   @override

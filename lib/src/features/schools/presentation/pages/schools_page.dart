@@ -56,7 +56,7 @@ class _SchoolsViewNewState extends State<SchoolsViewNew> {
                 );
               }
               return SchoolsLoaded(
-                schools: state.schools,
+                schools: state.schools.reversed.toList(),
                 // constraints: constraints,
               );
             },

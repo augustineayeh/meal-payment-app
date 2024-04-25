@@ -2,8 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:formz/formz.dart';
 import 'package:formz_input/formz_input.dart';
-import '../../data/models/school_model.dart';
 
+import '../../data/models/school_model.dart';
 import '../../domain/entities/school.dart';
 import '../../domain/repositories/school_repository.dart';
 
@@ -92,6 +92,12 @@ class SchoolCubit extends Cubit<SchoolState> {
   }
 
   void createSchool() async {
+    emit(
+      state.copyWith(
+        formStatus: FormzSubmissionStatus.inProgress,
+      ),
+    );
+
     final school = SchoolModel(
       name: state.name.value,
       location: state.location.value,
@@ -99,7 +105,6 @@ class SchoolCubit extends Cubit<SchoolState> {
       email: state.email.value,
       // image: state.image.value,
     );
-    // print(school.toJson());
 
     final failureOrSuccess =
         await _schoolRepository.createSchool(school: school);

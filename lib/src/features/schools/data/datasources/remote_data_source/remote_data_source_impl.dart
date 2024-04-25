@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:errors/errors.dart';
+import '../../../../../core/models/success.dart';
 
 import '../../../../../core/api/api_client.dart';
 import '../../../../../core/api/api_constants.dart';
@@ -27,6 +28,22 @@ class SchoolRemoteDataSourceImpl extends SchoolRemoteDataSource {
       throw ServerException(
         errorMessage: e.toString(),
       );
+    }
+  }
+
+  @override
+  Future<Success> createSchool({required SchoolModel school}) async {
+    try {
+      final response = await _apiClient.post(
+        endpoint: ApiConstants.schools,
+        model: school,
+      );
+
+      return Success.instance;
+    } on ServerException catch (e) {
+      throw ServerException(errorMessage: e.toString());
+    } catch (e) {
+      throw ServerException(errorMessage: e.toString());
     }
   }
 

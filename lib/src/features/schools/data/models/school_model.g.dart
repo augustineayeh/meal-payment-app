@@ -11,7 +11,7 @@ SchoolModel _$SchoolModelFromJson(Map<String, dynamic> json) => SchoolModel(
       id: json['id'] as String?,
       location: json['location'] as String,
       phoneNumber: json['phone_number'] as String,
-      email: json['email'] as String,
+      email: json['email'] as String?,
       image: json['image'] as String?,
     );
 

@@ -1,5 +1,7 @@
 import 'package:errors/errors.dart';
 import 'package:fpdart/fpdart.dart';
+import '../../../../core/models/success.dart';
+import '../models/school_model.dart';
 
 import '../../domain/entities/school.dart';
 import '../../domain/repositories/school_repository.dart';
@@ -10,6 +12,21 @@ class SchoolRepositoryImpl extends SchoolRepository {
       : _remoteDataSource = remoteDataSource;
 
   final SchoolRemoteDataSource _remoteDataSource;
+
+  @override
+  Future<Either<Failure, Success>> createSchool({
+    required SchoolModel school,
+  }) async {
+    try {
+      print(school.toJson());
+      final remoteData = await _remoteDataSource.createSchool(school: school);
+      return right(remoteData);
+    } on ServerException catch (e) {
+      return left(ServerFailure(errorMessage: e.errorMessage));
+    } catch (e) {
+      return left(ServerFailure(errorMessage: e.toString()));
+    }
+  }
 
   @override
   Future<Either<Failure, List<School>>> fetchSchools() async {

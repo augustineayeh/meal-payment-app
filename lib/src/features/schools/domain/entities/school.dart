@@ -7,14 +7,14 @@ class School extends Equatable {
     required this.name,
     required this.location,
     required this.phoneNumber,
-    required this.email,
-    required this.image,
+     this.email,
+    this.image,
   });
   final String? id;
   final String name;
   final String location;
   final String phoneNumber;
-  final String email;
+  final String? email;
   final String? image;
 
   static const empty = School(

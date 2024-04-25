@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:gap/gap.dart';
 import 'package:meal_payment_app/src/core/dummy/pages/school_detail_page.dart';
 import 'package:meal_payment_app/src/features/schools/domain/entities/school.dart';
-import 'package:meal_payment_app/src/features/vendors/presentation/widgets/vendors_list_view.dart';
+import 'package:meal_payment_app/src/features/vendors/presentation/widgets/horizontal_vendors_list_view.dart';
 
 class SchoolDetailsLoaded extends StatefulWidget {
   const SchoolDetailsLoaded({
@@ -76,7 +76,7 @@ class _SchoolDetailsLoadedState extends State<SchoolDetailsLoaded> {
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
                   const Gap(24),
-                  const VendorsList(),
+                  const HorizontalVendorsList(),
                 ],
               ),
             ),

@@ -3,32 +3,37 @@ import 'package:equatable/equatable.dart';
 
 class Student extends Equatable {
   const Student({
-    required this.firstName,
-    required this.lastName,
-    required this.middleName,
-    required this.fingerPrint,
-    required this.schoolId,
-    required this.schoolName,
+    this.firstName,
+    this.id,
+    this.lastName,
+    this.middleName,
+    this.fingerPrint,
+    this.schoolId,
+    this.schoolName,
   });
 
-  final String firstName;
-  final String lastName;
-  final String middleName;
-  final String fingerPrint;
-  final String schoolId;
-  final String schoolName;
+  final String? firstName;
+  final String? id;
+  final String? lastName;
+  final String? middleName;
+  final String? fingerPrint;
+  final String? schoolId;
+  final String? schoolName;
 
   static const empty = Student(
-      firstName: '',
-      lastName: '',
-      middleName: '',
-      fingerPrint: '',
-      schoolId: '',
-      schoolName: '');
+    firstName: '',
+    lastName: '',
+    middleName: '',
+    fingerPrint: '',
+    schoolId: '',
+    schoolName: '',
+    id: '',
+  );
 
   @override
-  List<Object> get props {
+  List<Object?> get props {
     return [
+      id,
       firstName,
       lastName,
       middleName,

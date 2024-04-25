@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields
+
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../domain/entities/student.dart';
@@ -7,12 +9,13 @@ part 'student_model.g.dart';
 @JsonSerializable()
 class StudentModel extends Student {
   const StudentModel({
-    required this.firstName,
-    required this.lastName,
-    required this.middleName,
-    required this.fingerPrint,
-    required this.schoolId,
-    required this.schoolName,
+    this.firstName,
+    this.lastName,
+    this.middleName,
+    this.fingerPrint,
+    this.schoolId,
+    this.schoolName,
+    super.id,
   }) : super(
           firstName: firstName,
           lastName: lastName,
@@ -24,24 +27,24 @@ class StudentModel extends Student {
 
   @override
   @JsonKey(name: 'first_name')
-  final String firstName;
+  final String? firstName;
   @override
   @JsonKey(name: 'last_name')
-  final String lastName;
+  final String? lastName;
   @override
   @JsonKey(name: 'middle_name')
-  final String middleName;
+  final String? middleName;
   @override
-  @JsonKey(name: 'finger_print')
-  final String fingerPrint;
+  @JsonKey(name: 'fingerprint')
+  final String? fingerPrint;
 
   @override
   @JsonKey(name: 'school')
-  final String schoolId;
+  final String? schoolId;
 
   @override
   @JsonKey(name: 'school_name')
-  final String schoolName;
+  final String? schoolName;
 
   factory StudentModel.fromJson(Map<String, dynamic> json) =>
       _$StudentModelFromJson(json);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:meal_payment_app/src/features/menus/domain/entities/menu.dart';
-import 'package:meal_payment_app/src/features/vendors/presentation/pages/edit_menu_page.dart';
+import '../../../menus/domain/entities/menu.dart';
+import '../pages/edit_menu_page.dart';
 
 class VendorsMenusLoaded extends StatelessWidget {
   const VendorsMenusLoaded({

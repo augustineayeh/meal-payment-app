@@ -16,6 +16,7 @@ class MenuModel extends Menu {
     required this.vendorId,
     required super.days,
     required super.id,
+    super.image,
   }) : super(
           dateCreated: dateCreated,
           vendorId: vendorId,

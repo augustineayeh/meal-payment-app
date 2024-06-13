@@ -8,6 +8,5 @@ import '../entities/vendor.dart';
 abstract class VendorRepository {
   Future<Either<Failure, List<Vendor>>> fetchVendors();
   Future<Either<Failure, Vendor>> fetchSingleVendor(String vendorId);
-    Future<Either<Failure, Success>> createVendor(
-      {required VendorModel vendor});
+  Future<Either<Failure, Success>> createVendor({required VendorModel vendor});
 }

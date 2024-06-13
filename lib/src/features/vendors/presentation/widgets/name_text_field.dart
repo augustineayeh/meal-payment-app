@@ -24,7 +24,7 @@ class _NameTextField extends StatelessWidget {
                       Theme.of(context).colorScheme.onPrimary.withOpacity(0.5),
                 ),
             errorText:
-                state.name.displayError != null ? 'invalid password' : null,
+                state.name.displayError != null ? 'invalid input' : null,
             focusedBorder: OutlineInputBorder(
               // borderSide: const BorderSide(
               //   color: ColorConsts.primaryColor,

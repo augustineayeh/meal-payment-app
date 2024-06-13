@@ -13,6 +13,7 @@ MenuModel _$MenuModelFromJson(Map<String, dynamic> json) => MenuModel(
       dateCreated: json['date_created'] as String,
       price: json['price'] as double,
       vendorId: json['vendor'] as String,
+      image: json['image'] as String?,
       days: json['days'] as String,
     );
 

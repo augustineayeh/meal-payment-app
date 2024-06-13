@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:meal_payment_app/src/features/vendors/presentation/pages/add_menu_page.dart';
+import 'add_menu_page.dart';
 
 import '../../../../core/dummy/pages/school_detail_page.dart';
 import '../../../orders/presentation/pages/orders_page.dart';

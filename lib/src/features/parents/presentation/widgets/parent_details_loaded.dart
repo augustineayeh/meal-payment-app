@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:gap/gap.dart';
-import 'package:meal_payment_app/src/core/dummy/pages/school_detail_page.dart';
-import 'package:meal_payment_app/src/features/parents/domain/entities/parent.dart';
+import '../../../../core/dummy/pages/school_detail_page.dart';
+import '../../domain/entities/parent.dart';
 
 // * to continue later
 

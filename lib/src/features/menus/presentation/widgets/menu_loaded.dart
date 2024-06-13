@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:meal_payment_app/src/features/menus/domain/entities/menu.dart';
-import 'package:meal_payment_app/src/features/menus/presentation/pages/menu_details_page.dart';
-import 'package:meal_payment_app/src/features/vendors/presentation/widgets/horizontal_vendors_list_view_2.dart';
+import '../../domain/entities/menu.dart';
+import '../pages/menu_details_page.dart';
+import '../../../vendors/presentation/widgets/horizontal_vendors_list_view_2.dart';
 
 class MenusLoaded extends StatelessWidget {
   const MenusLoaded({

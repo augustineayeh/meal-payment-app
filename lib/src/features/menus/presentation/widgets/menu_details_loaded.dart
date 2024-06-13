@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:meal_payment_app/src/core/dummy/pages/school_detail_page.dart';
-import 'package:meal_payment_app/src/features/menus/domain/entities/menu.dart';
-import 'package:meal_payment_app/src/features/vendors/presentation/pages/vendor_details_page.dart';
+
+import '../../../../core/dummy/pages/school_detail_page.dart';
+import '../../../vendors/presentation/pages/vendor_details_page.dart';
+import '../../domain/entities/menu.dart';
 
 class MenuDetailsLoaded extends StatefulWidget {
   const MenuDetailsLoaded({
@@ -55,6 +55,7 @@ class _MenuDetailsLoadedState extends State<MenuDetailsLoaded> {
                         image: NetworkImage(
                           widget.menu.image!,
                         ),
+                        fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(30),
                     ),
